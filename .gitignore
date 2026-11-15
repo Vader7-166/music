@@ -1,0 +1,14 @@
+.venv/
+.bootstrap/
+.claude/
+__pycache__/
+models/
+output/
+dist/
+python/
+run.sh
+HUONG_DAN.txt
+*.mp3
+*.wav
+*.flac
+*.m4a
