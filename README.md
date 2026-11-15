@@ -39,11 +39,20 @@ Giao diện đồ họa (mở http://127.0.0.1:7860):
 .venv\Scripts\python app.py
 ```
 
+Trong giao diện:
+
+- **Đầu ra:** chọn Đầy đủ / Chỉ vocal / Chỉ nhạc nền / Chỉ trống, hoặc tick từng file muốn xuất. App chỉ chạy những bước cần cho các file đã chọn.
+- **Nhiều job:** bấm "Thêm job" nhiều lần để xếp hàng; thanh "Số job chạy cùng lúc" (1–4) quyết định bao nhiêu job chạy song song. Chạy song song tốn thêm VRAM.
+- **Tải lại trang:** danh sách job nằm ở server và được lưu trong `output/jobs.json`, nên F5 hay mở lại app vẫn còn. Bấm vào một dòng trong bảng để xem kết quả.
+
 Dòng lệnh:
 
 ```
 .venv/bin/python split.py "bai_hat.mp3" --preset fast|balanced|quality
+.venv/bin/python split.py "bai_hat.mp3" --stems drums bass
 ```
+
+Các stem: `lead`, `lead_wet`, `back`, `fx`, `drums`, `bass`, `other`, `vocal_full`, `instrumental_full`.
 
 Lần chạy đầu sẽ tự tải các model (khoảng 2,4 GB) vào `models/`. Kết quả nằm trong `output/<tên bài>_<preset>/`.
 
